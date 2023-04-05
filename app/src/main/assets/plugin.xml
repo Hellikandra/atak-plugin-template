@@ -3,10 +3,10 @@
 <plugin>
     <extension
         type="transapps.maps.plugin.lifecycle.Lifecycle"
-        impl="com.atakmap.android.cuas.plugin.CuasLifeCycle"
+        impl="com.atakmap.android.plugintemplate.plugin.PluginTemplateLifeCycle"
         singleton="true" />
     <extension
         type="transapps.maps.plugin.tool.ToolDescriptor"
-        impl="com.atakmap.android.cuas.plugin.CuasPluginTool"
+        impl="com.atakmap.android.plugintemplate.plugin.PluginTemplatePluginTool"
         singleton="true" />
 </plugin>

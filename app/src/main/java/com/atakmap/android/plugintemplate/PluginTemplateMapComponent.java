@@ -6,7 +6,6 @@ import android.content.Intent;
 
 // ----- Local App import ----- //
 import com.atakmap.android.ipc.AtakBroadcast.DocumentedIntentFilter;
-import com.atakmap.android.maps.MapComponent;
 import com.atakmap.android.plugintemplate.plugin.R;
 
 // ----- ATAK API import ----- //
@@ -21,6 +20,9 @@ public class PluginTemplateMapComponent extends DropDownMapComponent
     private Context pluginContext;
     private PluginTemplateDropDownReceiver ddr;
 
+    public PluginTemplateMapComponent() {
+        super();
+    }
 
 
     public void onCreate (final Context context, Intent intent, final MapView view)
