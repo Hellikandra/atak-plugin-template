@@ -84,29 +84,6 @@ allprojects {
 apply plugin: 'com.android.application'
 apply plugin: 'atak-takdev-plugin'
 
-dependencies {
-    // this is an example of global excludes since androidx.core is supplied by core atak.
-    //configurations.implementation {
-    //    exclude group: 'androidx.core', module: 'core-ktx'
-    //    exclude group: 'androidx.core', module: 'core'
-    //}
-
-    implementation fileTree(dir: 'libs', include: '*.jar')
-
-    // Recyclerview version depends on some androidx libraries which
-    // are supplied by core, so they should be excluded.  Otherwise
-    // bad things happen in the release builds after proguarding
-    implementation ('androidx.recyclerview:recyclerview:1.2.1') {
-        exclude module: 'collection'
-        // this is an example of a local exclude since androidx.core is supplied by core atak
-        exclude module: 'core'
-        exclude module: 'lifecycle'
-        exclude module: 'core-common'
-        exclude module: 'collection'
-        exclude module: 'customview'
-    }
-}
-
 // Attempt to get a suitable version name for the plugin based on
 // either a git or svn repository
 def getVersionName() {
@@ -151,7 +128,7 @@ def getVersionCode() {
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
 
     dexOptions {
         jumboMode = true
@@ -338,7 +315,7 @@ android {
 }
 
 
-// dependencies {
-//     implementation fileTree(dir: 'libs', include: '*.jar')
-// }
+dependencies {
+    implementation fileTree(dir: 'libs', include: '*.jar')
+}
 
