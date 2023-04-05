@@ -2,11 +2,7 @@
 <!-- if you change this file, make sure to tick the versionCode in AndroidManifest. -->
 <plugin>
     <extension
-        type="transapps.maps.plugin.lifecycle.Lifecycle"
+        type="gov.tak.api.plugin.IPlugin"
         impl="com.atakmap.android.plugintemplate.plugin.PluginTemplateLifeCycle"
-        singleton="true" />
-    <extension
-        type="transapps.maps.plugin.tool.ToolDescriptor"
-        impl="com.atakmap.android.plugintemplate.plugin.PluginTemplatePluginTool"
         singleton="true" />
 </plugin>
